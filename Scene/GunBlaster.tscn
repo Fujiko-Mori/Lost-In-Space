@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbtsf27mp35gf"]
+
+[ext_resource type="Script" path="res://Scene/gun_blaster.gd" id="1_3gk6f"]
+[ext_resource type="Texture2D" uid="uid://g5vxin0rsjoj" path="res://Sprites/PistoBlaster.png" id="1_b10ah"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_3gk6f")
+
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_b10ah")
+
+[node name="BoutDuCanon" type="Node2D" parent="."]
+position = Vector2(9.75, 0.5)
+scale = Vector2(4, 4)
