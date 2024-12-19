@@ -1,4 +1,6 @@
 extends CharacterBody2D
+
+class_name Bullet
 var pos:Vector2
 var rota:float
 var dir : float

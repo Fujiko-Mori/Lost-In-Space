@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://4p7djg3lft8x"]
+
+[ext_resource type="Texture2D" uid="uid://dmjvtc7sea7wh" path="res://Sprites/PistoBlasterEnnemy.png" id="1_h7p5r"]
+[ext_resource type="Script" path="res://Scene/gun_blaster_ennemy.gd" id="1_n24iw"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_n24iw")
+
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_h7p5r")
+
+[node name="BoutDuCanon" type="Node2D" parent="."]
+position = Vector2(9.75, 0.5)
+scale = Vector2(4, 4)
+
+[node name="Calmdown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Calmdown" to="." method="_on_calmdown_timeout"]

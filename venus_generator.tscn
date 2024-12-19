@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6v3oy74lchvj"]
+
+[ext_resource type="Script" path="res://Script/venus_generator.gd" id="1_kojjo"]
+[ext_resource type="Texture2D" uid="uid://bt0p1taiksu2y" path="res://Sprites/Venus Murs.png" id="2_5rykl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xqrf"]
+texture = ExtResource("2_5rykl")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+4:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q1c23"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4xqrf")
+
+[node name="VENUS GENERATOR" type="Node2D"]
+script = ExtResource("1_kojjo")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_q1c23")
+format = 2

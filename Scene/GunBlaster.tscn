@@ -15,3 +15,9 @@ texture = ExtResource("1_b10ah")
 [node name="BoutDuCanon" type="Node2D" parent="."]
 position = Vector2(9.75, 0.5)
 scale = Vector2(4, 4)
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

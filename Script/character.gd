@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Character
 
 @onready var Anima=get_node("AnimatedSprite2D")
 
@@ -6,7 +7,7 @@ extends CharacterBody2D
 
 var H_mvt : float = 0.0
 var V_mvt : float = 0.0
-var speed : float = 300
+var speed : float = 200
 var facing_direction := Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
@@ -46,7 +47,7 @@ func _process(delta: float) -> void:
 		$Blaster/Gun.flip_v=true
 	else:
 		$Blaster/Gun.flip_v=false
-	
+
 	move_and_slide()
 
 
